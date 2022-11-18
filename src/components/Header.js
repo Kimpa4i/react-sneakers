@@ -16,7 +16,7 @@ function Header(props) {
             className="mr-15"
             width={40}
             height={40}
-            src="/img/logo.png"
+            src="img/logo.png"
             alt="Logo"
           ></img>
           <div className="headerInfo">
@@ -32,7 +32,7 @@ function Header(props) {
             width={18}
             height={18}
             alt="Корзина"
-            src="/img/cart.svg"
+            src="img/cart.svg"
           ></img>
           <span>{totalPrice} руб.</span>
         </li>
@@ -43,7 +43,7 @@ function Header(props) {
               width={18}
               height={18}
               alt="Закладки"
-              src="/img/love.svg"
+              src="img/love.svg"
             ></img>
           </Link>
         </li>
@@ -52,7 +52,7 @@ function Header(props) {
             <img
               width={18}
               height={18}
-              src="/img/user.svg"
+              src="img/user.svg"
               alt="Пользователь"
             ></img>
           </li>
