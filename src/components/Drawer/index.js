@@ -1,18 +1,20 @@
-import Info from "./Info";
+import Info from "../Info";
 import React from "react";
-import AppContext from "../context";
 import axios from "axios";
+import { useCart } from "../../hooks/useCart";
+import styles from "../Drawer/Drawer.module.scss";
 
 const delay = ms =>
   new Promise(function (resolve) {
     setTimeout(resolve, ms);
   });
 
-function Drawer({ items = [], onClose, onRemove }) {
+function Drawer({ items = [], onClose, onRemove, opened }) {
   const [isOrderComplete, setIsOrderComplete] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(false);
   const [orderId, setOrderId] = React.useState(null);
-  const { cartItems, setCartItems } = React.useContext(AppContext);
+
+  const { totalPrice, cartItems, setCartItems } = useCart();
 
   const onClickOrder = async () => {
     try {
@@ -38,8 +40,9 @@ function Drawer({ items = [], onClose, onRemove }) {
   };
 
   return (
-    <div className="overlay">
-      <div className="drawer">
+    <div className={`${styles.overlay} ${opened ? styles.overlayVisible : ""}`}>
+      {/* прикрутился класс overlayVisible если открыли карт */}
+      <div className={styles.drawer}>
         <h2 className="mb-30">
           Корзина
           <img
@@ -51,7 +54,7 @@ function Drawer({ items = [], onClose, onRemove }) {
         </h2>
 
         {items.length > 0 ? (
-          <div className="items flex flex-column">
+          <div className="items d-flex flex-column flex">
             <div className="items flex">
               {items.map(obj => (
                 <div
@@ -81,12 +84,12 @@ function Drawer({ items = [], onClose, onRemove }) {
                 <li>
                   <span>Итого: </span>
                   <div></div>
-                  <b>21 498 руб. </b>
+                  <b>{totalPrice} руб. </b>
                 </li>
                 <li className="d-flex">
                   <span>Налог 5%: </span>
                   <div></div>
-                  <b>1074 руб. </b>
+                  <b>{totalPrice * 0.05} руб. </b>
                 </li>
               </ul>
               <button

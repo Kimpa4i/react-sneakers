@@ -59,38 +59,6 @@ input {
   width: 200px;
 }
 
-.overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-}
-
-.drawer {
-  position: absolute;
-  width: 420px;
-  height: 100%;
-  background: #ffffff;
-  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
-  right: 0;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  h2 {
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .items {
-    overflow: auto;
-    margin-bottom: 40px;
-  }
-}
-
 .cartTotalBlock {
   ul {
     display: block;
