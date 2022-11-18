@@ -33,7 +33,7 @@ export default function Home({
           {searchValue ? `Поиск по запросу "${searchValue}"` : "Все кроссовки"}
         </h1>
         <div className="search-block d-flex">
-          <img src="/img/search.svg" alt="Search"></img>
+          <img src="img/search.svg" alt="Search"></img>
           <input
             onChange={onChangeInput}
             value={searchValue}
@@ -43,7 +43,7 @@ export default function Home({
             <img
               onClick={() => setSearchValue("")}
               className="clean cu-p"
-              src="/img/btn-remove.svg"
+              src="img/btn-remove.svg"
               alt="clean"
             ></img>
           )}
