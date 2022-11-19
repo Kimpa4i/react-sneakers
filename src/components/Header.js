@@ -37,7 +37,7 @@ function Header(props) {
           <span>{totalPrice} руб.</span>
         </li>
         <li>
-          <Link to="favorites">
+          <Link to="/favorites">
             <img
               className="mr-20 cu-p"
               width={18}
@@ -47,7 +47,7 @@ function Header(props) {
             ></img>
           </Link>
         </li>
-        <Link to="orders">
+        <Link to="/orders">
           <li>
             <img
               width={18}

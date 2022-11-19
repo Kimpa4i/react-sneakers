@@ -15,7 +15,7 @@ export default function Home({
     const filterItem = items.filter(item =>
       item.title.toLowerCase().includes(searchValue.toLowerCase())
     );
-    return (isLoading ? [...Array(10)] : filterItem).map((item, index) => (
+    return (isLoading ? [...Array(8)] : filterItem).map((item, index) => (
       <Card
         key={index}
         {...item}

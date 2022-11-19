@@ -117,7 +117,7 @@ function App() {
           "https://634c3bf5acb391d34a81a79d.mockapi.io/favorites",
           obj
         );
-        setFavorites(prev => [...prev, obj]);
+        setFavorites(prev => [...prev, data]);
       }
     } catch (error) {
       alert("не удалось добавить в фавориты");
