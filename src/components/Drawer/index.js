@@ -65,7 +65,6 @@ function Drawer({ items = [], onClose, onRemove, opened }) {
                     style={{ backgroundImage: `url(${obj.imageUrl})` }}
                     className="cartItemImg"
                   ></div>
-                  {/* <img className='mr-20' src='/img/snik/2.jpg' width={70} height={70} alt='Sneakers'></img> */}
                   <div className="mr-20 flex">
                     <p className="mb-5">{obj.title}</p>
                     <b>{obj.price} руб.</b>

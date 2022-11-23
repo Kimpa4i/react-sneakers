@@ -31,7 +31,7 @@ export default function Orders() {
         <h1>Мои покупки</h1>
       </div>
       <div className="d-flex flex-wrap">
-        {(isLoading ? [...Array(10)] : orders).map((item, index) => (
+        {(isLoading ? [...Array(12)] : orders).map((item, index) => (
           <Card key={index} {...item} loaded={isLoading} />
         ))}
       </div>
