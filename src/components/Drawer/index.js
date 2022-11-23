@@ -97,7 +97,7 @@ function Drawer({ items = [], onClose, onRemove, opened }) {
                 onClick={onClickOrder}
                 className="greenButton"
               >
-                Оформить заказ<img src="/img/arrow.svg" alt="Arrow"></img>
+                Оформить заказ<img src="img/arrow.svg" alt="Arrow"></img>
               </button>
             </div>
           </div>
